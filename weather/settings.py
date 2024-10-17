@@ -27,7 +27,9 @@ if SECRET_KEY is None:
         f.write(f'SECRET_KEY={SECRET_KEY}\n')
 
 DEBUG = os.environ.get("DEBUG", "False") == "True"
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = ["localhost", "127.0.0.1",
+                 "weather-lookup-production.up.railway.app"]
+
 
 INSTALLED_APPS = [
     'main',

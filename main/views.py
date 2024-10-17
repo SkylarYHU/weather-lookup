@@ -12,7 +12,7 @@ def index(request):
         city = request.POST['city']
 
         formatted_city = quote(city)
-        api_key = os.getenv('API_KEY')  # 从环境变量获取 API 密钥
+        api_key = os.getenv('API_KEY')
         url = f'https://api.openweathermap.org/data/2.5/weather?units=metric&q={
             formatted_city}&appid={api_key}'
 
