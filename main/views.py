@@ -2,6 +2,7 @@ from django.shortcuts import render
 import json
 import urllib.request
 from urllib.parse import quote
+from django.conf import settings
 
 
 def index(request):
@@ -12,7 +13,7 @@ def index(request):
         city = request.POST['city']
         formatted_city = quote(city)
         url = f'https://api.openweathermap.org/data/2.5/weather?units=metric&q={
-            formatted_city}&appid=dfcf9128c9382120e3d3e37a6f731405'
+            formatted_city}&appid={settings.OPENWEATHER_API_KEY}'
 
         try:
             # Fetch the data from OpenWeatherMap API
