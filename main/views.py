@@ -12,8 +12,8 @@ def index(request):
 
         formatted_city = quote(city)
         # Correct URL without spaces around '='
-        url = f'https://api.openweathermap.org/data/2.5/weather?units=metric&q={
-            formatted_city}&appid=dfcf9128c9382120e3d3e37a6f731405'
+        url = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=" + \
+            formatted_city + "&appid=dfcf9128c9382120e3d3e37a6f731405"
 
         try:
             # Fetch the data from OpenWeatherMap API
