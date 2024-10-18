@@ -54,6 +54,10 @@ MIDDLEWARE = [
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = [
+    'https://weather-lookup-production.up.railway.app',
+    'http://weather-lookup-production.up.railway.app',
+]
 
 ROOT_URLCONF = "weather.urls"
 
