@@ -12,8 +12,7 @@ def index(request):
     if request.method == "POST":
         city = request.POST['city']
         formatted_city = quote(city)
-        url = f'https://api.openweathermap.org/data/2.5/weather?units=metric&q={
-            formatted_city}&appid={settings.OPENWEATHER_API_KEY}'
+        url = f'https://api.openweathermap.org/data/2.5/weather?units=metric&q={formatted_city}&appid={settings.OPENWEATHER_API_KEY}'
 
         try:
             # Fetch the data from OpenWeatherMap API
